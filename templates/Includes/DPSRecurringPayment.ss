@@ -22,7 +22,7 @@
 	<a href="$HarnessPayNextLink"> -- Trigger Next</a>
 <% end_if %>
 <% if Payments %>
-	<% control Payments %>
+	<% loop Payments %>
 		<% include DPSPayment %>
-	<% end_control %>
+	<% end_loop %>
 <% end_if %>

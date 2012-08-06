@@ -1,5 +1,5 @@
 <% if TxnType=Complete %>
-	<% control AuthPayment %>
+	<% with AuthPayment %>
 		<h3>$ClassName $ID</h3>
 		<% if ExceptionError %>
 			<div class="exception message">$ExceptionError</div>
@@ -15,11 +15,11 @@
 				<% if PaymentDate %><li>Payment Date: $PaymentDate</li><% end_if %>
 			</ul>
 		<% end_if %>
-	<% end_control %>
+	<% end_with %>
 <% end_if %>
 
 <% if TxnType=Refund %>
-	<% control RefundedFor %>
+	<% with RefundedFor %>
 		<h3>$ClassName $ID</h3>
 		<% if ExceptionError %>
 			<div class="exception message">$ExceptionError</div>
@@ -35,7 +35,7 @@
 				<% if PaymentDate %><li>Payment Date: $PaymentDate</li><% end_if %>
 			</ul>
 		<% end_if %>
-	<% end_control %>
+	<% end_with %>
 <% end_if %>
 
 <h3>$ClassName $ID</h3>
