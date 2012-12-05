@@ -6,4 +6,4 @@ Director::addRules(50, array(
 	'harness/$Action/$Class/$ID' => 'Harness', 
 ));
 
-Object::add_extension('Member', 'PayerHavingReceipt');
+//Object::add_extension('Member', 'PayerHavingReceipt');
